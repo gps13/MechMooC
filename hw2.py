@@ -91,17 +91,27 @@ print "yikes(5) =", yikes(x)
 
 ## 1 - rand_divis_3 function
 ##### YOUR CODE HERE #####
-
+import random
+import math
+def rand_divis_3():
+	return random.randint(0,100)%3==0
 # Test Cases
 ##### YOUR CODE HERE #####
+print rand_divis_3()
+print rand_divis_3()
+print rand_divis_3()
 
 ## 2 - roll_dice function - remember that a die's lowest number is 1;
                             #its highest is the number of sides it has
 ##### YOUR CODE HERE #####
-
+def roll_dice(sides_of_dice,dice_to_roll):
+	for i in range(1,dice_to_roll+1):
+		print random.randint(1,sides_of_dice)
+	return "That's all!"
 # Test Cases
-##### YOUR CODE HERE #####                            
-
+print roll_dice(6,3)  
+print roll_dice(8,2)
+print roll_dice(12,1)                        
 
 # ********** Exercise 2.5 **********
 
