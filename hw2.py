@@ -31,7 +31,6 @@ def rpsinput(player1,player2):
 		else:
 			return "Player2 wins"
 # Test Cases for Exercise 2.1
-##### YOUR CODE HERE #####
 print rpsinput("paper", "rock")
 print
 print rpsinput("rock", "rock")
@@ -41,20 +40,24 @@ print rpsinput("paper", "scissors")
 
 # Define is_divisible function here
 ##### YOUR CODE HERE #####
-
+def is_divisible(m,n):
+	return m%n==0 if n!=0 else "do not divide with 0"
 # Test cases for is_divisible
 ## Provided for you... uncomment when you're done defining your function
 
-#print is_divisible(10, 5)  # This should return True
-#print is_divisible(18, 7)  # This should return False
-#print is_divisible(42, 0)  # What should this return?
-
+print is_divisible(10, 5)  # This should return True
+print is_divisible(18, 7)  # This should return False
+print is_divisible(42, 0)  # What should this return?
 
 # Define not_equal function here
 ##### YOUR CODE HERE #####
-
+def not_equal(a,b):
+	return not a==b
 # Test cases for not_equal
-##### YOUR CODE HERE #####
+print "g" != "d"
+print not_equal("g","d")
+print not_equal(1,2)
+print not_equal(1,1)
 
 # ********** Exercise 2.3 ********** 
 
