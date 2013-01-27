@@ -63,27 +63,29 @@ print not_equal(1,1)
 
 ## 1 - multadd function
 ##### YOUR CODE HERE #####
+def multadd(a,b,c):
+	return a*b+c
 
 ## 2 - Equations
 ##### YOUR CODE HERE #####
-
+import math
 
 # Test Cases
-# angle_test =
-# print "sin(pi/4) + cos(pi/4)/2 is:"
-# print angle_test
+angle_test = multadd(0.5, math.cos(math.pi/4),math.sin(math.pi/4))
+print "sin(pi/4) + cos(pi/4)/2 is:"
+print angle_test
 
-# ceiling_test =
-# print "ceiling(276/19) + 2 log_7(12) is:"
-# print ceiling_test
+ceiling_test =multadd(2, math.log(12,7), math.ceil(276/19))
+print "ceiling(276/19) + 2 log_7(12) is:"
+print ceiling_test
 
 ## 3 - yikes function
 ##### YOUR CODE HERE #####
-
-
+def yikes(x):
+	return multadd(x,math.e**(-x),math.sqrt(1-math.e**(-x)))
 # Test Cases
-# x = 5
-# print "yikes(5) =", yikes(x)
+x = 5
+print "yikes(5) =", yikes(x)
 
 # ********** Exercise 2.4 **********
 
