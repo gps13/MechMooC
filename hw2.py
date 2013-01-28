@@ -117,6 +117,20 @@ print roll_dice(12,1)
 
 # code for roots function
 ##### YOUR CODE HERE #####   
-
-# Test Cases
-##### YOUR CODE HERE #####   
+import math
+def roots(a,b,c):
+	'''The Quadratic Formula: For ax2 + bx + c = 0, the value of x is given by
+	x=(-b+-SQRT(b^2-4*a*c)/2*a)
+	'''
+	root=b**2-4*a*c
+	if root <0:
+		root=abs(complex(root))
+		j=complex(0,1)
+		return (-b+j+math.sqrt(root))/2*a,(-b-j+math.sqrt(root))/2*a
+	else:
+		return (-b+math.sqrt(root))/2*a,(-b-math.sqrt(root))/2*a
+# Test Cases 
+print roots(1,0,-4)
+print roots(1,-4,-8)
+print roots(1,3,4)
+print roots(1,9,4)
