@@ -42,11 +42,30 @@ print cumulative_sum([4, 3, 2, 1])
 
 def report_card():
     ##### YOUR CODE HERE #####
-    
+    course=[]
+    grade=[]
+    count=input("How many classes did you take?")
+    for i in range(int(count)):
+        course.append(raw_input("What was the name of this class?"))
+        grade.append(input("What was your grade?"))
+    print "................"
+    print "Report Card:"
+    for i in range(int(count)):
+        print course[i] + " - " + str(grade[i])
+    print "Overall GPA %s" %(sum(grade)/int(count))
 
 # Test Cases
 ## In comments, show the output of one run of your function.
-
+# How many classes did you take?2
+# What was the name of this class?c
+# What was your grade?10
+# What was the name of this class?p
+# What was your grade?6
+# ................
+# Report Card:
+# c - 10
+# p - 6
+# Overall GPA 8
 # **********  Exercise 2.9 **********
 
 # Write any helper functions you need here.
