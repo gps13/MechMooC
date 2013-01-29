@@ -96,3 +96,16 @@ def fonien(word):
 print fonien("tester")
 # **********  Exercise OPT.1 **********
 # If you do any work for this problem, submit it here 
+VOWELS = ['a', 'e', 'i', 'o', 'u']
+def pig_latin(word):
+    # word is a string to convert to pig-latin
+    ##### YOUR CODE HERE ##### 
+    if word[0] in VOWELS :
+        return word+'hay'
+    else:
+        return word[1:]+word[0]+'ay'
+def translate():
+    phrase=raw_input("please enter a phrase. only words and spaces!!!!")
+    phrase=phrase.lower()
+    words=phrase.split()
+    return [pig_latin(x) for x in words]
