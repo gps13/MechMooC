@@ -86,9 +86,13 @@ print pig_latin("image")
 
 
 # **********  Exercise 2.10 **********
-# Test Cases
 ##### YOUR CODE HERE #####
+print [x**3 for x in range(1,11)]
+print [x+y for x in ["h","t"] for y in ["h","t"]] 
 
-
+def fonien(word):
+    return [x for x in word if x in ['a', 'e', 'i', 'o', 'u']]
+# Test Cases
+print fonien("tester")
 # **********  Exercise OPT.1 **********
 # If you do any work for this problem, submit it here 
