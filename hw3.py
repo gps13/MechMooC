@@ -92,9 +92,28 @@ print people(23) ==   []
 
 def zellers(month, day, year):
     ##### YOUR CODE HERE #####
-
-    return "Not Yet Implemented"
+    dict_of_days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+    num_of_month = [11,12]+range(1,11)
+    #combine to create dict_of_months
+    dict_of_months=dict(zip(months,num_of_month))
+    A=dict_of_months[month[:3].lower()]
+    B=day
+    D=year/100
+    C=year%100
+    if A == 11 or A == 12:
+        C -= 1
+    W=(13*A-1)/5
+    X=C/4
+    Y=D/4
+    Z=W+X+Y+B+C-2*D
+    R=Z%7
+    if R < 0:
+        R += 7
+    return dict_of_days[R]
 
 # Test Cases for Exercise 3.5
-print zellers("March", 10, 1940) == "Sunday" # This should be True
 ##### YOUR CODE HERE #####
+print zellers("March", 10, 1940) == "Sunday" # This should be True
+print zellers("May", 19, 2012) == "Saturday" # This should be True
+print zellers("May", 19, 2012) == "Monday" # This should be False
