@@ -38,22 +38,31 @@ print ball_collide((7, 8, 2), (4, 4, 3)) # Should be True
 # **********  Exercise 3.3 **********
 
 # Define your dictionary here - populate with classes from last term
-my_classes = {}
+my_classes = {'6.111': 'History', '6.222':'Math','8.444':'Literature'}
 
 def add_class(class_num, desc):
     ##### YOUR CODE HERE #####
-    return "Not Yet Implemented"
+    my_classes[class_num]=desc
+    # return "Not Yet Implemented"
 
 # Here, use add_class to add the classes you're taking next term
 add_class('6.189', 'Introduction to Python')
 
 def print_classes(course):
     ##### YOUR CODE HERE #####
-    return "Not Yet Implemented"
+    is_lesson_in=False
+    for lesson in my_classes.keys():
+        if course ==  lesson[0]:
+            print lesson+ ' - ' + my_classes[lesson]
+            is_lesson_in =True
+    if not is_lesson_in:
+        print "No Course %s classes taken" %course
+    # return "Not Yet Implemented
 
 # Test Cases for Exercise 3.3
 ##### YOUR CODE HERE #####
-
+print_classes('6')
+print_classes('9')
 # **********  Exercise 3.4 **********
 
 NAMES = ['Alice', 'Bob', 'Cathy', 'Dan', 'Ed', 'Frank',
