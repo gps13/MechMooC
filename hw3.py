@@ -71,24 +71,22 @@ AGES = [20, 21, 18, 18, 19, 20, 20, 19, 19, 19, 22, 19]
 
 # Define your functions here
 def combine_lists(l1, l2):
-    comb_dict = {}
-    ##### YOUR CODE HERE #####
+    comb_dict = dict(zip(l1, l2))
     return comb_dict
 
-# combined_dict = combine_lists(??, ??) # Finish this line...
+combined_dict = combine_lists(NAMES, AGES)
 
 def people(age):
-    # Use combined_dict within this function...
-    return "Not Yet Implemented"
+    return [name for name in combined_dict if combined_dict[name]==age ]
 
 # Test Cases for Exercise 3.4 (all should be True)
-#print 'Dan' in people(18) and 'Cathy' in people(18)
-#print 'Ed' in people(19) and 'Helen' in people(19) and\
-#       'Irene' in people(19) and 'Jack' in people(19) and 'Larry'in people(19)
-#print 'Alice' in people(20) and 'Frank' in people(20) and 'Gary' in people(20)
-#print people(21) ==   ['Bob']
-#print people(22) ==   ['Kelly']
-#print people(23) ==   []
+print 'Dan' in people(18) and 'Cathy' in people(18)
+print 'Ed' in people(19) and 'Helen' in people(19) and\
+       'Irene' in people(19) and 'Jack' in people(19) and 'Larry'in people(19)
+print 'Alice' in people(20) and 'Frank' in people(20) and 'Gary' in people(20)
+print people(21) ==   ['Bob']
+print people(22) ==   ['Kelly']
+print people(23) ==   []
 
 # **********  Exercise 3.5 **********
 
